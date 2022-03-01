@@ -9,11 +9,11 @@ function probabilidadFamilia= PFamilia()
   
   if(consumo==consume)
     
-    probabilidadFamilia= pTotal * (rand(1)*0.45);
+    probabilidadFamilia= pTotal * (rand(1)*0.55);
     
   elseif(consumo==noConsume)
     
-    probabilidadFamilia= pTotal*(-rand(1)*0.55);
+    probabilidadFamilia= pTotal*(-rand(1)*0.45);
   endif  
   
   
