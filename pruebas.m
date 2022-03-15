@@ -1,8 +1,8 @@
-function SConsumo()
+function pruebas()
 
 matriz = GPoblacion();
 PintarMatriz(matriz);
-pause();
+pause
 contador=0;
 while (contador<5)
   
@@ -11,30 +11,35 @@ for i = 2 : 9
     if (i==2 && j==2)
        auxEnI = matriz(i+1,j);
        auxEnJ = matriz(i,j+1);
-       matriz(i,j)= (((auxEnI+auxEnJ)/2)+matriz(i,j))/2;
-       
+       resultado= (auxEnI+auxEnJ)/2;
+       matriz(i,j)= ((resultado)+matriz(i,j))/resultado  ;
     elseif (i==2 && j==9)
        auxEnI = matriz(i+1,j);
        auxEnJ = matriz(i,j+1);
-       matriz(i,j)= (((auxEnI+auxEnJ)/2)+matriz(i,j))/2;
+       resultado= (auxEnI+auxEnJ)/2;
+       matriz(i,j)= ((resultado)+matriz(i,j))/resultado ;
     elseif (i==9 && j==9)
        auxEnI = matriz(i+1,j);
        auxEnJ = matriz(i,j+1);
-       matriz(i,j)= (((auxEnI+auxEnJ)/2)+matriz(i,j))/2;
+       resultado= (auxEnI+auxEnJ)/2;
+       matriz(i,j)= ((resultado)+matriz(i,j))/resultado;
     elseif (i==9 && j==2)
        auxEnI = matriz(i+1,j);
        auxEnJ = matriz(i,j+1);
-       matriz(i,j)= (((auxEnI+auxEnJ)/2)+matriz(i,j))/2;
+       resultado= (auxEnI+auxEnJ)/2;
+       matriz(i,j)= ((resultado)+matriz(i,j))/resultado;
     else 
        auxEnI = matriz(i-1,j)+matriz(i+1,j);
        auxEnJ = matriz(i,j-1)+matriz(i,j+1);
-       matriz(i,j)= (((auxEnJ+auxEnI)/4)+matriz(i,j))/2;
+       resultado= (auxEnI+auxEnJ)/4;
+       matriz(i,j)= ((resultado)+matriz(i,j))/resultado;
     endif
   endfor
  endfor
  contador+=1;
+
  disp(contador);
 PintarMatriz(matriz);
-pause (0.0005);
+ pause(1);
 endwhile
-  endfunction
+endfunction
