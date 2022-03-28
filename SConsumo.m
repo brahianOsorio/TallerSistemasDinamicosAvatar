@@ -12,7 +12,6 @@ for i = 2 : 9
        auxEnI = matriz(i+1,j);
        auxEnJ = matriz(i,j+1);
        matriz(i,j)= (((auxEnI+auxEnJ)/2)+matriz(i,j))/2;
-       
     elseif (i==2 && j==9)
        auxEnI = matriz(i+1,j);
        auxEnJ = matriz(i,j+1);
@@ -20,11 +19,12 @@ for i = 2 : 9
     elseif (i==9 && j==9)
        auxEnI = matriz(i+1,j);
        auxEnJ = matriz(i,j+1);
-       matriz(i,j)= (((auxEnI+auxEnJ)/2)+matriz(i,j))/2;
+       matriz(i,j)= (((auxEnI+auxEnJ)/2)+matriz(i,j))/2; 
     elseif (i==9 && j==2)
        auxEnI = matriz(i+1,j);
        auxEnJ = matriz(i,j+1);
        matriz(i,j)= (((auxEnI+auxEnJ)/2)+matriz(i,j))/2;
+   
     else 
        auxEnI = matriz(i-1,j)+matriz(i+1,j);
        auxEnJ = matriz(i,j-1)+matriz(i,j+1);
